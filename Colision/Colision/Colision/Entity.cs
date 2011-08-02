@@ -8,7 +8,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace Colision
 {
-    class Entity
+    public abstract class Entity
     {
 
         //Entity position x and y
@@ -43,6 +43,20 @@ namespace Colision
         //The Update function, it's blank but I don't want to call different Updates from each class that uses Entity as base
         public virtual void Update(GameTime gTime)
         {
+
+        }
+
+        //The constructor of the class, takes the position texture and size
+        public Entity(Vector2 pos, Texture2D tex, Vector2 siz)
+        {
+
+            //Defines the position, texture and size of the Entity
+            position = pos;
+            texture = tex;
+            size = siz;
+
+            //The frame by default will be 0,0
+            frame = Vector2.Zero;
 
         }
 

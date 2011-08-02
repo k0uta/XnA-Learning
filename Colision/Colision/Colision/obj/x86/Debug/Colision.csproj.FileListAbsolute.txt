@@ -1,0 +1,6 @@
+C:\dev\XnA-Learning\Colision\Colision\Colision\bin\x86\Debug\Colision.exe
+C:\dev\XnA-Learning\Colision\Colision\Colision\bin\x86\Debug\Colision.pdb
+C:\dev\XnA-Learning\Colision\Colision\Colision\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\dev\XnA-Learning\Colision\Colision\Colision\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\dev\XnA-Learning\Colision\Colision\Colision\obj\x86\Debug\Colision.exe
+C:\dev\XnA-Learning\Colision\Colision\Colision\obj\x86\Debug\Colision.pdb
