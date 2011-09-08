@@ -17,7 +17,7 @@ namespace FirstSideScroller
     public class SideScroller : Microsoft.Xna.Framework.Game
     {
         GraphicsDeviceManager graphics;
-        SpriteBatch spriteBatch;
+        public static SpriteBatch spriteBatch;
 
         public SideScroller()
         {
