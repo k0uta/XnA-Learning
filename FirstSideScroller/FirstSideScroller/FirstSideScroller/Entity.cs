@@ -40,5 +40,11 @@ namespace FirstSideScroller
             SideScroller.spriteBatch.Draw(texture, position, source, Color.White);
 
         }
+
+        //The update method
+        public virtual void Update(GameTime gTime)
+        {
+
+        }
     }
 }
