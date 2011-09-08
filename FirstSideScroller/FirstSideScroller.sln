@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C# Express 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstSideScroller", "FirstSideScroller\FirstSideScroller\FirstSideScroller.csproj", "{E36060AE-B82E-4BA3-A3C0-2990362D710F}"
+EndProject
+Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "FirstSideScrollerContent", "FirstSideScroller\FirstSideScrollerContent\FirstSideScrollerContent.contentproj", "{69EA8549-C99A-44E0-95D9-954B2342EF3D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E36060AE-B82E-4BA3-A3C0-2990362D710F}.Debug|x86.ActiveCfg = Debug|x86
+		{E36060AE-B82E-4BA3-A3C0-2990362D710F}.Debug|x86.Build.0 = Debug|x86
+		{E36060AE-B82E-4BA3-A3C0-2990362D710F}.Release|x86.ActiveCfg = Release|x86
+		{E36060AE-B82E-4BA3-A3C0-2990362D710F}.Release|x86.Build.0 = Release|x86
+		{69EA8549-C99A-44E0-95D9-954B2342EF3D}.Debug|x86.ActiveCfg = Debug|x86
+		{69EA8549-C99A-44E0-95D9-954B2342EF3D}.Release|x86.ActiveCfg = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
