@@ -19,10 +19,20 @@ namespace Colision
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
+        Player pPoint;
+
+        public static Texture2D mapTrack;
+
+        Vector2 gameLimits;
+
         public ColisionGame()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+            gameLimits = new Vector2(800, 600);
+            graphics.PreferredBackBufferWidth = (int)gameLimits.X;
+            graphics.PreferredBackBufferHeight = (int)gameLimits.Y;
+            graphics.ApplyChanges();
         }
 
         /// <summary>
@@ -47,6 +57,10 @@ namespace Colision
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
+            //Initialize the player. The constructor must be called here because of the 'Content.Load' function. This function must be used in the LoadContent as far as i know.
+            pPoint = new Player(new Vector2(100,150), Content.Load<Texture2D>("Point"), new Vector2(1, 4));
+            mapTrack = Content.Load<Texture2D>("MapTrack");
+
             // TODO: use this.Content to load your game content here
         }
 
@@ -70,6 +84,9 @@ namespace Colision
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
+            //Call the player update
+            pPoint.Update(gameTime,graphics,spriteBatch);
+
             // TODO: Add your update logic here
 
             base.Update(gameTime);
@@ -83,9 +100,22 @@ namespace Colision
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            // TODO: Add your drawing code here
+            //Begin the Draw process
+            spriteBatch.Begin();
+            
+            //Draws the map
+            spriteBatch.Draw(mapTrack,Vector2.Zero,Color.White);
 
+            //Call the Player draw function
+            pPoint.Draw(spriteBatch);
+            
+            //End the Draw process
+            spriteBatch.End();
+
+            // TODO: Add your drawing code here
+            
             base.Draw(gameTime);
         }
+
     }
 }

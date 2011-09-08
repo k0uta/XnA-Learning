@@ -41,7 +41,7 @@ namespace Colision
         }
 
         //The Update function, it's blank but I don't want to call different Updates from each class that uses Entity as base
-        public virtual void Update(GameTime gTime)
+        public virtual void Update(GameTime gTime, GraphicsDeviceManager gManager, SpriteBatch sBatch)
         {
 
         }
