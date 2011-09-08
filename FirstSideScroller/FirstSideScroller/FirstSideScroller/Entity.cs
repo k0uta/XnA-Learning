@@ -20,6 +20,25 @@ namespace FirstSideScroller
         //The source rectangle, pointing where (X and Y) and the size of the entity
         protected Rectangle source;
 
+        //The constructor
+        public Entity(Vector2 pos, Texture2D tex)
+        {
+            //Set the position and the texture
+            position = pos;
+            texture = tex;
 
+            //Intializes the source rectangle to avoid errors
+            source = new Rectangle(0, 0, tex.Width, tex.Height);
+
+        }
+
+        //The draw method
+        public virtual void Draw()
+        {
+
+            //Draw the entity using the parameters
+            SideScroller.spriteBatch.Draw(texture, position, source, Color.White);
+
+        }
     }
 }
