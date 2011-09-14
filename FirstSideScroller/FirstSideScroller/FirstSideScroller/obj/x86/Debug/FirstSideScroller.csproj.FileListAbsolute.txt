@@ -1,0 +1,11 @@
+C:\dev\XnA-Learning\FirstSideScroller\FirstSideScroller\FirstSideScroller\bin\x86\Debug\Content\Char.xnb
+C:\dev\XnA-Learning\FirstSideScroller\FirstSideScroller\FirstSideScroller\bin\x86\Debug\FirstSideScroller.exe
+C:\dev\XnA-Learning\FirstSideScroller\FirstSideScroller\FirstSideScroller\bin\x86\Debug\FirstSideScroller.pdb
+C:\dev\XnA-Learning\FirstSideScroller\FirstSideScroller\FirstSideScroller\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\dev\XnA-Learning\FirstSideScroller\FirstSideScroller\FirstSideScroller\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\dev\XnA-Learning\FirstSideScroller\FirstSideScroller\FirstSideScroller\obj\x86\Debug\FirstSideScroller.exe
+C:\dev\XnA-Learning\FirstSideScroller\FirstSideScroller\FirstSideScroller\obj\x86\Debug\FirstSideScroller.pdb
+C:\dev\XnA-Learning\FirstSideScroller\FirstSideScroller\FirstSideScroller\bin\x86\Debug\Content\Map1.xnb
+C:\dev\XnA-Learning\FirstSideScroller\FirstSideScroller\FirstSideScroller\bin\x86\Debug\Content\Map2.xnb
+C:\dev\XnA-Learning\FirstSideScroller\FirstSideScroller\FirstSideScroller\bin\x86\Debug\Content\Map3.xnb
+C:\dev\XnA-Learning\FirstSideScroller\FirstSideScroller\FirstSideScroller\bin\x86\Debug\Content\Char2.xnb

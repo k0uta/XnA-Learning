@@ -16,8 +16,14 @@ namespace FirstSideScroller
     /// </summary>
     public class SideScroller : Microsoft.Xna.Framework.Game
     {
-        GraphicsDeviceManager graphics;
+
+        //These vars are static because i need to reference them in other files
+        public static GraphicsDeviceManager graphics;
         public static SpriteBatch spriteBatch;
+        public static Texture2D mapTexture;
+
+        //The player var
+        Player p1;
 
         public SideScroller()
         {
@@ -47,6 +53,12 @@ namespace FirstSideScroller
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
+            //The map texture
+            mapTexture = Content.Load<Texture2D>("Map3");
+
+            //Here we load the player texture and the player itself
+            p1 = new Player(new Vector2(100,100), Content.Load<Texture2D>("Char"), 2);
+
             // TODO: use this.Content to load your game content here
         }
 
@@ -72,6 +84,9 @@ namespace FirstSideScroller
 
             // TODO: Add your update logic here
 
+            //Call the player update method
+            p1.Update(gameTime);
+
             base.Update(gameTime);
         }
 
@@ -82,6 +97,63 @@ namespace FirstSideScroller
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
+
+            //Create a new matrix, this matrix is useful to create a camera system in the game, the camera will follow the position
+            //This "camera" method wasn't created by me, i'm just using some parts of the system
+            Matrix viewMatrix = new Matrix();
+
+            //This var is useful so we can apply the next 4 if's, they're going to check if the position is in the Viewport + Map bounds
+            Vector2 cameraPosition = p1.position;
+
+            if (cameraPosition.X < (GraphicsDevice.Viewport.Width / 2.0f))
+            {
+
+                cameraPosition = new Vector2(GraphicsDevice.Viewport.Width / 2.0f, cameraPosition.Y);
+
+            }
+            else if(cameraPosition.X>(mapTexture.Width-(GraphicsDevice.Viewport.Width/2.0f)))
+            {
+
+                cameraPosition = new Vector2((mapTexture.Width - (GraphicsDevice.Viewport.Width / 2.0f)), cameraPosition.Y);
+
+            }
+
+            if (cameraPosition.Y < (GraphicsDevice.Viewport.Height / 2.0f))
+            {
+
+                cameraPosition = new Vector2(cameraPosition.X, GraphicsDevice.Viewport.Height / 2.0f);
+
+            }
+            else if (cameraPosition.Y > (mapTexture.Height - (GraphicsDevice.Viewport.Height / 2.0f)))
+            {
+
+                cameraPosition = new Vector2(cameraPosition.X, (mapTexture.Height - (GraphicsDevice.Viewport.Height / 2.0f)));
+
+            }
+
+            //Create a translation from the camera position (i'm still trying to figure out why the position needs to be negative .-.)
+            viewMatrix = Matrix.CreateTranslation(new Vector3(-cameraPosition, 0.0f));
+
+            //Create a new vector2 that defines the origin (position) of the camera. Here we use the viewPort so we can adjust the camera to the Screen Size)
+            Vector2 origin = new Vector2(GraphicsDevice.Viewport.Width/2.0f,GraphicsDevice.Viewport.Height/2.0f);
+
+            //These methods are useful to rotate and apply zoom to the Camera
+            //viewMatrix = viewMatrix * Matrix.CreateRotationZ(MathHelper.ToRadians(90));
+            //viewMatrix = viewMatrix * Matrix.CreateScale(0.5f);
+
+            //Here we create a translation of the origin and multiply by the current matrix (yeah i suck at matrix and i'm still trying to figure it out too :X)
+            viewMatrix = viewMatrix * Matrix.CreateTranslation(new Vector3(origin, 0.0f));
+
+            //Here we use a different Begin method so we can use the matrix to change the game "Camera" position
+            spriteBatch.Begin(SpriteSortMode.Deferred,null,null,null,null,null,viewMatrix);
+
+            //Draw the map (use the Vector2.Zero as position because the bounds use the Vector2.Zero as origin)
+            spriteBatch.Draw(mapTexture, Vector2.Zero, Color.White);
+            
+            //Call the player draw method
+            p1.Draw(gameTime);
+
+            spriteBatch.End();
 
             // TODO: Add your drawing code here
 

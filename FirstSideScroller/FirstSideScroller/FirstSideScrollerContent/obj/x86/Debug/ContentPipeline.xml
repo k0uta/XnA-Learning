@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>Char.png</Source>
+      <Name>Char</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\dev\XnA-Learning\FirstSideScroller\FirstSideScroller\FirstSideScroller\bin\x86\Debug\Content\Char.xnb</Output>
+      <Time>2011-09-10T12:37:22.2870995-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Map1.png</Source>
+      <Name>Map1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\dev\XnA-Learning\FirstSideScroller\FirstSideScroller\FirstSideScroller\bin\x86\Debug\Content\Map1.xnb</Output>
+      <Time>2011-09-10T11:37:23.7972777-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Map2.png</Source>
+      <Name>Map2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\dev\XnA-Learning\FirstSideScroller\FirstSideScroller\FirstSideScroller\bin\x86\Debug\Content\Map2.xnb</Output>
+      <Time>2011-09-14T18:58:02.2951562-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Map3.png</Source>
+      <Name>Map3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\dev\XnA-Learning\FirstSideScroller\FirstSideScroller\FirstSideScroller\bin\x86\Debug\Content\Map3.xnb</Output>
+      <Time>2011-09-14T19:29:13.9032061-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Char2.png</Source>
+      <Name>Char2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\dev\XnA-Learning\FirstSideScroller\FirstSideScroller\FirstSideScroller\bin\x86\Debug\Content\Char2.xnb</Output>
+      <Time>2011-09-14T19:41:46.2922403-03:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <TargetPlatform>Windows</TargetPlatform>
+      <TargetProfile>HiDef</TargetProfile>
+      <BuildConfiguration>Debug</BuildConfiguration>
+      <CompressContent>false</CompressContent>
+      <RootDirectory>C:\dev\XnA-Learning\FirstSideScroller\FirstSideScroller\FirstSideScrollerContent\</RootDirectory>
+      <LoggerRootDirectory>C:\dev\XnA-Learning\FirstSideScroller\FirstSideScroller\FirstSideScroller\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\dev\XnA-Learning\FirstSideScroller\FirstSideScroller\FirstSideScrollerContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\dev\XnA-Learning\FirstSideScroller\FirstSideScroller\FirstSideScroller\bin\x86\Debug\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2010-08-23T12:41:18-03:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2010-08-23T12:41:18-03:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2010-08-23T12:41:18-03:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2010-08-23T12:41:18-03:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2010-08-23T12:41:18-03:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2010-08-23T12:41:18-03:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2011-06-17T12:29:17.7088331-03:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>
