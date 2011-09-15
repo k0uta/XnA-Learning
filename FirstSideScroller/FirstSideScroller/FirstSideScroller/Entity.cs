@@ -15,10 +15,10 @@ namespace FirstSideScroller
         public Vector2 position;
 
         //The entity texture
-        protected Texture2D texture;
+        public Texture2D texture;
 
         //The source rectangle, pointing where (X and Y) and the size of the entity
-        protected Rectangle source;
+        public Rectangle source;
 
         //Sprite Effects (in case we need)
         protected SpriteEffects spriteEffects;
@@ -128,6 +128,15 @@ namespace FirstSideScroller
 
             //If there were no collision we return the false statement
             return false;
+
+        }
+
+        //Now i'm going to check if there were a collision between two entitys
+        public bool checkColisionEntity(Entity targetEntity)
+        {
+
+            //Actually this is pretty easy, we make 2 rectangles and check if they intersect
+            return source.Intersects(targetEntity.source);
 
         }
     }
