@@ -180,10 +180,66 @@ namespace FirstSideScroller
             Vector2 newPosition = position;
             newPosition += new Vector2(speed * direction, 0);
 
-            if (!checkColisionMap(newPosition))
+            bool entityCollision = false;
+
+            foreach (Entity ent in SideScroller.entities)
+            {
+
+                if (ent != null)
+                {
+
+                    if (checkColisionEntity(ent))
+                    {
+
+                        entityCollision = true;
+
+                    }
+
+                }
+
+            }
+
+            if (!checkColisionMap(newPosition) && !entityCollision)
             {
 
                 position = newPosition;
+
+            }
+
+            //Lets check the gravity
+            Vector2 nextPosition = position;
+            nextPosition += new Vector2(0, gravity);
+
+            entityCollision = false;
+
+            foreach (Entity ent in SideScroller.entities)
+            {
+
+                if (ent != null)
+                {
+
+                    if (checkColisionEntity(ent))
+                    {
+
+                        entityCollision = true;
+
+                    }
+
+                }
+
+            }
+
+            if (checkColisionMap(nextPosition) || entityCollision)
+            {
+
+                //Do nothing if the next position causes a colision, this can change in the future
+
+            }
+            else
+            {
+
+                //If the next position did not collided with anything in the map texture we define that the next position is safe
+                position = nextPosition;
 
             }
             

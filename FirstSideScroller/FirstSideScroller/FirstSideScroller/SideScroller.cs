@@ -21,11 +21,12 @@ namespace FirstSideScroller
         public static GraphicsDeviceManager graphics;
         public static SpriteBatch spriteBatch;
         public static Texture2D mapTexture;
+        public static Entity[] entities = new Entity[20];
+        //A entity list
+        
 
         //The player var
         Player p1;
-
-        Entity[] entities = new Entity[20];
 
         public SideScroller()
         {
@@ -61,6 +62,7 @@ namespace FirstSideScroller
             //Here we load the player texture and the player itself
             p1 = new Player(new Vector2(100,100), Content.Load<Texture2D>("Char"), 2);
 
+            //Here i initialize the first entity
             entities[0] = new Entity(new Vector2(300, 300), Content.Load<Texture2D>("Char2"));
             entities[0].source = new Rectangle(0, 0, entities[0].texture.Width, entities[0].texture.Height / 2);
 
@@ -155,6 +157,7 @@ namespace FirstSideScroller
             //Draw the map (use the Vector2.Zero as position because the bounds use the Vector2.Zero as origin)
             spriteBatch.Draw(mapTexture, Vector2.Zero, Color.White);
 
+            //Here we move through each entity and, if it's not null, we draw it
             foreach (Entity ent in entities)
             {
 
@@ -174,5 +177,6 @@ namespace FirstSideScroller
 
             base.Draw(gameTime);
         }
+
     }
 }

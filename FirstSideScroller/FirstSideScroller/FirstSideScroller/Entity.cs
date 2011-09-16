@@ -8,7 +8,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace FirstSideScroller
 {
-    class Entity
+    public class Entity
     {
 
         //The position Vector
@@ -51,24 +51,6 @@ namespace FirstSideScroller
         //The update method
         public virtual void Update(GameTime gTime)
         {
-
-            //Lets check the gravity
-            Vector2 nextPosition = position;
-            nextPosition += new Vector2(0,gravity);
-
-            if (checkColisionMap(nextPosition))
-            {
-
-                //Do nothing if the next position causes a colision, this can change in the future
-
-            }
-            else
-            {
-
-                //If the next position did not collided with anything in the map texture we define that the next position is safe
-                position = nextPosition;
-
-            }
 
         }
 
@@ -136,7 +118,10 @@ namespace FirstSideScroller
         {
 
             //Actually this is pretty easy, we make 2 rectangles and check if they intersect
-            return source.Intersects(targetEntity.source);
+            Rectangle targetRectangle = new Rectangle((int)targetEntity.position.X, (int)targetEntity.position.Y, targetEntity.source.Width, targetEntity.source.Height);
+            Rectangle originalRectangle = new Rectangle((int)position.X, (int)position.Y, source.Width, source.Height);
+
+            return originalRectangle.Intersects(targetRectangle);
 
         }
     }
