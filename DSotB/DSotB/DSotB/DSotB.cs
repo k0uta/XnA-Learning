@@ -16,8 +16,8 @@ namespace DSotB
     /// </summary>
     public class DSotB : Microsoft.Xna.Framework.Game
     {
-        GraphicsDeviceManager graphics;
-        SpriteBatch spriteBatch;
+        public static GraphicsDeviceManager graphics;
+        public static SpriteBatch spriteBatch;
 
         public DSotB()
         {
