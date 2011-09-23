@@ -19,10 +19,18 @@ namespace DSotB
         public static GraphicsDeviceManager graphics;
         public static SpriteBatch spriteBatch;
 
+        public const int GAME_WIDTH = 800;
+        public const int GAME_HEIGHT = 600;
+
+        Player p1;
+
         public DSotB()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+
+            graphics.PreferredBackBufferWidth = GAME_WIDTH;
+            graphics.PreferredBackBufferHeight = GAME_HEIGHT;
         }
 
         /// <summary>
@@ -47,6 +55,8 @@ namespace DSotB
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
+            p1 = new Player(2, Content.Load<Texture2D>("PModel1"), new Vector2(50, 50));
+
             // TODO: use this.Content to load your game content here
         }
 
@@ -70,6 +80,8 @@ namespace DSotB
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
+            p1.Update(gameTime);
+
             // TODO: Add your update logic here
 
             base.Update(gameTime);
@@ -82,6 +94,10 @@ namespace DSotB
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
+
+            spriteBatch.Begin();
+            p1.Draw(gameTime);
+            spriteBatch.End();
 
             // TODO: Add your drawing code here
 

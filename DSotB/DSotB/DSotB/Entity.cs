@@ -14,6 +14,7 @@ namespace DSotB
         protected Vector2 position;
         protected Texture2D texture;
         protected Rectangle source;
+        protected Rectangle hitBox;
 
         public virtual void Draw(GameTime gameTime)
         {
@@ -26,6 +27,13 @@ namespace DSotB
         {
 
 
+
+        }
+
+        public bool CheckCollision(Entity targetEnt)
+        {
+
+            return hitBox.Intersects(targetEnt.hitBox);
 
         }
 
