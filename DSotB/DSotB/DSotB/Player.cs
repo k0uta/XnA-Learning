@@ -12,8 +12,6 @@ namespace DSotB
     public class Player : Entity
     {
 
-        String playerName;
-
         int frameNumber = 0;
         int frameHeight;
 
@@ -21,6 +19,8 @@ namespace DSotB
 
         int horizontalD = 0;
         int verticalD = 0;
+
+        int lives = 3;
 
         KeyboardState lastKstate;
 
@@ -118,6 +118,8 @@ namespace DSotB
             }
 
             position = nextPosition;
+
+            hitBox = new Rectangle((int)position.X + texture.Width / 4, (int)position.Y + frameHeight / 8, texture.Width * 3 / 4, frameHeight * 3 / 4);
             
             base.Update(gameTime);
 
@@ -129,6 +131,15 @@ namespace DSotB
             source = new Rectangle(0, frameNumber, texture.Width, frameHeight);
 
             base.Draw(gameTime);
+
+        }
+
+        public void ShotCollision()
+        {
+
+            lives--;
+
+            position = new Vector2(50, 50);
 
         }
     }

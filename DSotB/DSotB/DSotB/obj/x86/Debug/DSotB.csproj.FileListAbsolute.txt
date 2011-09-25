@@ -5,3 +5,4 @@ C:\dev\XnA-Learning\DSotB\DSotB\DSotB\obj\x86\Debug\ResolveAssemblyReference.cac
 C:\dev\XnA-Learning\DSotB\DSotB\DSotB\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\dev\XnA-Learning\DSotB\DSotB\DSotB\obj\x86\Debug\DSotB.exe
 C:\dev\XnA-Learning\DSotB\DSotB\DSotB\obj\x86\Debug\DSotB.pdb
+C:\dev\XnA-Learning\DSotB\DSotB\DSotB\bin\x86\Debug\Content\ExampleShot.xnb

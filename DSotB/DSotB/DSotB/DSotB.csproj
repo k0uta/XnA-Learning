@@ -109,10 +109,12 @@
   <ItemGroup>
     <Compile Include="EnemyShot.cs" />
     <Compile Include="Entity.cs" />
+    <Compile Include="LinearShot.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="DSotB.cs" />
+    <Compile Include="Shot.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Game.ico" />

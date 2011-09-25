@@ -20,9 +20,11 @@ namespace DSotB
         public static SpriteBatch spriteBatch;
 
         public const int GAME_WIDTH = 800;
-        public const int GAME_HEIGHT = 600;
+        public const int GAME_HEIGHT = 400;
 
-        Player p1;
+        public static Player p1;
+
+        LinearShot exampleshot;
 
         public DSotB()
         {
@@ -57,6 +59,8 @@ namespace DSotB
 
             p1 = new Player(2, Content.Load<Texture2D>("PModel1"), new Vector2(50, 50));
 
+            exampleshot = new LinearShot(new Vector2(400, 200), Content.Load<Texture2D>("ExampleShot"), 1);
+
             // TODO: use this.Content to load your game content here
         }
 
@@ -81,6 +85,7 @@ namespace DSotB
                 this.Exit();
 
             p1.Update(gameTime);
+            exampleshot.Update(gameTime);
 
             // TODO: Add your update logic here
 
@@ -96,7 +101,10 @@ namespace DSotB
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             spriteBatch.Begin();
+
             p1.Draw(gameTime);
+            exampleshot.Draw(gameTime);
+
             spriteBatch.End();
 
             // TODO: Add your drawing code here
