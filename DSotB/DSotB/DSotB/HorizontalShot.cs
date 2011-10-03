@@ -8,14 +8,14 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace DSotB
 {
-    public class LinearShot : EnemyShot
+    public class HorizontalShot : EnemyShot
     {
 
-        public LinearShot(Vector2 position, Texture2D texture, int shotSpeed)
+        public HorizontalShot(Vector2 position, Texture2D texture, int shotSpeed, int shotOrientation)
             : base(position, texture)
         {
 
-            speed = shotSpeed;
+            speed = shotSpeed * shotOrientation;
 
         }
 

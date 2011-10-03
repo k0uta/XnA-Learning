@@ -13,6 +13,8 @@ namespace DSotB
 
         protected int speed;
 
+        protected int orientation=1;
+
         public bool destroy = false;
 
         public override void Draw(Microsoft.Xna.Framework.GameTime gameTime)

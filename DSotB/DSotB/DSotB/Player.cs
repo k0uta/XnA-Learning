@@ -119,7 +119,7 @@ namespace DSotB
 
             position = nextPosition;
 
-            hitBox = new Rectangle((int)position.X + texture.Width / 4, (int)position.Y + frameHeight / 8, texture.Width * 3 / 4, frameHeight * 3 / 4);
+            hitBox = new Rectangle((int)position.X + texture.Width / 8, (int)position.Y + frameHeight / 8, texture.Width * 3 / 4, frameHeight * 3 / 4);
             
             base.Update(gameTime);
 

@@ -24,7 +24,8 @@ namespace DSotB
 
         public static Player p1;
 
-        LinearShot exampleshot;
+        EnemyShot[] exampleshot = new EnemyShot[20];
+
 
         public DSotB()
         {
@@ -59,7 +60,9 @@ namespace DSotB
 
             p1 = new Player(2, Content.Load<Texture2D>("PModel1"), new Vector2(50, 50));
 
-            exampleshot = new LinearShot(new Vector2(400, 200), Content.Load<Texture2D>("ExampleShot"), 1);
+            //exampleshot[0] = new HorizontalShot(new Vector2(400, 200), Content.Load<Texture2D>("ExampleShot"), 1,1);
+            exampleshot[1] = new AngleShot(new Vector2(400, 200), Content.Load<Texture2D>("ExampleShot"), 1, 1, 135);
+            exampleshot[2] = new AngleShot(new Vector2(400, 200), Content.Load<Texture2D>("ExampleShot"), 1, 1, 45);
 
             // TODO: use this.Content to load your game content here
         }
@@ -85,7 +88,20 @@ namespace DSotB
                 this.Exit();
 
             p1.Update(gameTime);
-            exampleshot.Update(gameTime);
+
+            foreach (EnemyShot eShot in exampleshot)
+            {
+
+                if (eShot != null)
+                {
+
+                    eShot.Update(gameTime);
+
+                }
+
+            }
+
+            //exampleshot.Update(gameTime);
 
             // TODO: Add your update logic here
 
@@ -103,7 +119,20 @@ namespace DSotB
             spriteBatch.Begin();
 
             p1.Draw(gameTime);
-            exampleshot.Draw(gameTime);
+
+            foreach (EnemyShot eShot in exampleshot)
+            {
+
+                if (eShot != null)
+                {
+
+                    eShot.Draw(gameTime);
+
+                }
+
+            }
+
+            //exampleshot.Draw(gameTime);
 
             spriteBatch.End();
 
